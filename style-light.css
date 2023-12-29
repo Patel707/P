@@ -1,0 +1,40 @@
+/* Light Theme */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: rgb(195, 195, 195);
+    background: radial-gradient(circle, rgba(195, 195, 195, 1) 0%, rgba(237, 238, 241, 1) 100%);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 560px;
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    background: rgb(223, 223, 223);
+    background: radial-gradient(circle, rgba(223, 223, 223, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container > h1 {
+    font-size: 33px;
+    font-weight: bold;
+}
+
+/* ... (Rest of the Light Theme styles) */
