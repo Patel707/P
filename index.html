@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Math Game</title>
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="main">
+
+        <div class="container">
+
+            <h1>Arithmetic Math Game</h1>
+            <div class="line"></div>
+
+            <div class="htp-container">
+                <h2>How to Play?</h2>
+
+                <p>Form an arithmetic equation that equals to the given answer.</p>
+
+                <h3><i>Example:</i></h3>
+                <h2><i>69</i></h2>
+                <h3><i>20 * 3 + 6</i></h4>
+                <small>(This will be the your expected answer.)</small>
+                <p>Solve as many as you can in 2 minutes!</p>
+                <p>Beat your high score!</p>
+
+                <button onclick="startGame()">Start Game!</button>
+
+            </div>
+
+            <div class="game-container" style="display: none;">
+
+                <div class="game-header">
+                    <div class="high-score">
+                        <label>High Score</label>
+                        <input type="text" value="0" readonly>
+                    </div>
+                    <div class="timer">
+                        <label>Time</label>
+                        <input type="text" value="02:00" readonly>
+                    </div>
+                    <div class="your-score">
+                        <label>Your Score</label>
+                        <input type="text" value="0" readonly>
+                    </div>
+                </div>
+
+                <div class="target-answer">
+                    <input type="text" value="69">
+                </div>
+
+                <div class="user-input">
+                    <input type="text">
+                </div>
+
+                <div class="numbers-button">
+                    <button onclick="appendToUserInput('1')">1</button>
+                    <button onclick="appendToUserInput('2')">2</button>
+                    <button onclick="appendToUserInput('3')">3</button>
+                    <button onclick="appendToUserInput('4')">4</button>
+                    <button onclick="appendToUserInput('5')">5</button>
+                    <button onclick="appendToUserInput('6')">6</button>
+                    <button onclick="appendToUserInput('7')">7</button>
+                    <button onclick="appendToUserInput('8')">8</button>
+                    <button onclick="appendToUserInput('9')">9</button>
+                    <button onclick="appendToUserInput('0')">0</button>
+                </div>
+
+                <div class="operations">
+                    <button onclick="appendToUserInput('*')">*</button>
+                    <button onclick="appendToUserInput('/')">/</button>
+                    <button onclick="appendToUserInput('+')">+</button>
+                    <button onclick="appendToUserInput('-')">-</button>
+                    <button onclick="clearUserInput()">C</button>
+                </div>
+
+                <div class="game-footer">
+                    <button onclick="restartGame()">Restart Game</button>
+                    <button onclick="checkAnswer()">Next >></button>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>
