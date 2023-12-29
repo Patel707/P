@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arithmetic Math Game</title>
-    
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="./style.css">
+
+    <!-- Light Theme CSS -->
+    <link rel="stylesheet" href="./style-light.css">
+
+    <!-- Dark Theme CSS -->
+    <link rel="stylesheet" href="./style-dark.css">
 </head>
 <body>
-  <script type="text/javascript">
-    aclib.runInPagePush({
-        zoneId: '7893778',
-        refreshRate: 30,
-        maxAds: 2,
-    });
-  </script>
-    
+    <script type="text/javascript">
+        aclib.runInPagePush({
+            zoneId: '7893778',
+            refreshRate: 30,
+            maxAds: 2,
+        });
+    </script>
+
     <div class="main">
-
         <div class="container">
-
             <h1>Arithmetic Math Game</h1>
             <div class="line"></div>
-
             <div class="htp-container">
                 <h2>How to Play?</h2>
-
-                <p>Form an arithmetic equation that equals to the given answer.</p>
-
+                <p>Form an arithmetic equation that equals the given answer.</p>
                 <h3><i>Example:</i></h3>
                 <h2><i>69</i></h2>
                 <h3><i>20 * 3 + 6</i></h4>
-                <small>(This will be the your expected answer.)</small>
+                <small>(This will be your expected answer.)</small>
                 <p>Solve as many as you can in 2 minutes!</p>
                 <p>Beat your high score!</p>
-
                 <button onclick="startGame()">Start Game!</button>
-
             </div>
-
             <div class="game-container" style="display: none;">
-
                 <div class="game-header">
                     <div class="high-score">
                         <label>High Score</label>
@@ -57,15 +51,12 @@
                         <input type="text" value="0" readonly>
                     </div>
                 </div>
-
                 <div class="target-answer">
                     <input type="text" value="69">
                 </div>
-
                 <div class="user-input">
                     <input type="text">
                 </div>
-
                 <div class="numbers-button">
                     <button onclick="appendToUserInput('1')">1</button>
                     <button onclick="appendToUserInput('2')">2</button>
@@ -78,7 +69,6 @@
                     <button onclick="appendToUserInput('9')">9</button>
                     <button onclick="appendToUserInput('0')">0</button>
                 </div>
-
                 <div class="operations">
                     <button onclick="appendToUserInput('*')">*</button>
                     <button onclick="appendToUserInput('/')">/</button>
@@ -86,27 +76,30 @@
                     <button onclick="appendToUserInput('-')">-</button>
                     <button onclick="clearUserInput()">C</button>
                 </div>
-
                 <div class="game-footer">
                     <button onclick="restartGame()">Restart Game</button>
                     <button onclick="checkAnswer()">Next >></button>
                 </div>
             </div>
         </div>
-
-
-        
     </div>
     <div align="center">
-    <script type="text/javascript">
-        aclib.runBanner({
-            zoneId: '7893722',
-        });
-    </script>
+        <script type="text/javascript">
+            aclib.runBanner({
+                zoneId: '7893722',
+            });
+        </script>
     </div>
-    
 
     <!-- Script JS -->
     <script src="./script.js"></script>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark-theme");
+        }
+    </script>
 </body>
 </html>
